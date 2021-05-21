@@ -13,12 +13,46 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 The original data contains:
 ======================================
 
-This script takes the data from the original sources and merges them in only one data set. After that, it retains only the values related to standard deviation (std) and means (mean). Then, it merges the data with subject and activity, and fianally i calculates the average of each variables for activity and subject.
+- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
+- Triaxial Angular velocity from the gyroscope. 
+- A 561-feature vector with time and frequency domain variables. 
+- Its activity label. 
+- An identifier of the subject who carried out the experiment.
 ======================================
 
 To create this data set, only the variables representing mean and standard deviation was taken into account. With this reduction the number of variables passes from 561 to 68.
 
 Additional to this selection, information about the subject and the activity are incorporated in the data set.
+
+So, this data set contains: 
+
+subject_Code 
+activity_description 
+These first data represents the subject tested and the activity evaluated.
+
+Besides, the data set contains the following means calculated by activity and subject:
+the mean of tBodyAcc_mean and the mean of tBodyAcc_std in X, Y, Z axes
+the mean of tGravityAcc_mean and the mean of tGravityAcc_std in X, Y, Z axes
+the mean of tBodyAccJerk_mean and the mean of tBodyAccJerk_std in X, Y, Z axes
+the mean of tBodyGyro_mean and the mean of tBodyGyro_std in X, Y, Z axes
+the mean of tBodyGyroJerk_mean and the mean of tBodyGyroJerk_std in X, Y, Z axes
+the mean of tBodyAccMag_mean and the mean of tBodyAccMag_std
+the mean of tGravityAccMag_mean and the mean of tGravityAccMag_std
+the mean of tBodyAccJerkMag_mean and the mean of tBodyAccJerkMag_std
+the mean of tBodyGyroMag_mean and the mean of tBodyGyroMag_std
+the mean of tBodyGyroJerkMag_mean and the mean of tBodyGyroJerkMag_std
+
+For this variables the prefix "t" means that the variable is related to time and the suffix "_mean" stands for mean and the prefix "_std" is related to standard deviation and "X", "Y", "Z" is from the axis represented.
+
+the mean of fBodyAcc_mean and the mean of fBodyAcc_std in X, Y, Z axes
+the mean of fBodyAccJerk_mean and the mean of fBodyAccJerk_std in X, Y, Z axes
+the mean of fBodyGyro_mean and the mean of fBodyGyro_std in X, Y, Z axes
+the mean of fBodyAccMag_mean and the mean of fBodyAccMag_std
+the mean of fBodyBodyAccJerkMag_mean and the mean of fBodyBodyAccJerkMag_std
+the mean of fBodyBodyGyroMag_mean and the mean of fBodyBodyGyroMag_std
+the mean of fBodyBodyGyroJerkMag_mean and the mean of fBodyBodyGyroJerkMag_std
+
+For this variables the prefix "f" means that the variable is related to time and the suffix "_mean" stands for mean and the prefix "_std" is related to standard deviation and "X", "Y", "Z" is from the axis represented.
 
 According to the description of the original data set, the features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz.
 
